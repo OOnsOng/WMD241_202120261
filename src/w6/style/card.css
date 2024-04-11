@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Cute+Font&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+/* 링크 가져오면 폰트 다운 안받고 웹용으로 쓸 수 있음 -> 다른 사람들도 볼 수 있음 /맨 위에 링크 붙이기 /온라인에서 실시간으로 가져오는 것이기 때문에 와이파이 꺼지면 작동 안함 */
+* {
+  box-sizing: border-box;
+}
+/* 사이즈 지정 (항상 넣어야 함) */
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Cute Font", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card.card--color-blue {
+  background-color: oklch(98% 0.025 200);
+}
+/* specificity가 4이상으로 안올라가는 것이 좋음
+먼저 쓴 것보다 나중에 쓴 것이 우선한다
+구체적으로 써진 것일 수록 위에 있어도 우선한다
+specificity가 똑같은 애들끼리는 늦게 쓰인게 이긴다 */
+
+/* .이 붙어야 class name */
+.card {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 25rem;
+  background-color: oklch(98% 0.025 90);
+  overflow-x: hidden;
+  border-radius: 0.75rem;
+  margin-top: 3rem;
+}
+/* (UX)웹디자인을 할 때는 oklch를 써야함
+뒤에 배경색이 바껴도 글자색에는 지장이 없음
+lightness 채도 hue 순서 */
+/* scroll -> 화면을 반으로 자름 */
+
+/* psuedo selector */
+.card:first-child {
+  margin-top: 0;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__top {
+  /* background-color: oklch(50% 0.2 120); 
+  색이 들어가는 구간 보여주기용*/
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+}
+
+.card__bottom {
+  padding: 1rem;
+}
+
+.card__p {
+  padding-top: 2rem;
+}
+
+.card__title {
+  font-size: 1rem;
+  font-weight: 500%;
+  line-height: 1.5rem;
+}
+
+.card__subtitle {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  line-height: 1.25rem;
+}
+
+.card__bottom .card__title {
+  font-weight: 400;
+  /* 글자가 얇아짐 */
+}
+
+.card__bottom .card__subtitle {
+  margin-top: 0;
+}
