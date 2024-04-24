@@ -25,10 +25,11 @@ body {
   display: flex;
   justify-content: space-between;
   padding-inline: 5.625rem;
-  padding-block: 1.75rem;
+  padding-block: 0.9375rem;
 
   /* 블랙으로 바꾸기 */
   background-color: black;
+  max-height: 5.5rem;
 }
 
 .navigation > .navigation__menu-group {
@@ -69,7 +70,7 @@ body {
   background-color: rgb(218, 219, 241);
 
   padding-inline: 1.875rem;
-  padding-block: 6.375rem;
+  padding-block: 5.9375rem;
   /* margin: auto; */
 }
 
@@ -91,10 +92,11 @@ body {
   margin-inline: auto;
   background-color: #fff;
   padding: 1rem;
-  max-width: 780p;
+  max-width: 48.75rem;
   border: 0.0313rem solid black;
   border-radius: 0.3125rem;
   color: #9e9e9e;
+  margin-top: 3.75rem;
 
   padding-inline: 1.875rem;
 
@@ -130,6 +132,7 @@ body {
   justify-content: space-between;
   padding-inline: 5.625rem;
   padding-block: 1.75rem;
+  text-align: left;
 }
 
 .section__body {
@@ -141,8 +144,17 @@ body {
 }
 
 /* for work*/
-.navigation  {
+.navigation {
   /* background-color: bisque; */
+}
+
+.bottom {
+  margin-inline: auto;
+  background-color: black;
+
+  padding-inline: 1.875rem;
+  padding-block: 1.25rem;
+  color: #fff;
 }
 
 /* 아이콘 넣을 때 참고
