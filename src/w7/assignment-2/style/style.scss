@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.navigation {
+  font-size: 1.5rem;
+  background-color: #000;
+  color: #fff;
+  padding-inline: 1.875rem;
+  padding-block: 1.1875rem;
+  &__container {
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    // 좌우로 밀어줌
+    // background-color: aqua;
+  }
+
+  &__menu-goup {
+    display: flex;
+    align-items: center;
+    &--left {
+      gap: 0.8125rem;
+    }
+    &--right {
+      gap: 1rem;
+      @media (width < 900px) {
+        & {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__page-title {
+    margin-top: 0.1875rem;
+    padding-top: 0.1875rem;
+    padding-left: 0.8125rem;
+    line-height: 1.4375rem;
+    border-left: 0.125rem solid #fff;
+  }
+
+  // &는 .navigation이라는 뜻
+  &__logo {
+    height: 2rem;
+    aspect-ratio: 200 / 51;
+    // aspect-ratio로 가로/ 세로 지정
+  }
+  &__btn {
+    padding-inline: 1.4375rem;
+    padding-block: 1.6875rem;
+    line-height: 2.25rem;
+    border-radius: 0.5rem;
+    &--outline {
+      border: 1px solid #fff;
+      background-color: #191a1b;
+    }
+    &--fill {
+      background-color: #515fcb;
+    }
+  }
+  @media (width < 900px) {
+    // 가로가 900px보다 작아지면 없어져라
+    .navigation {
+      &__menu-group {
+        &--right {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  background-color: #dadbee;
+  padding-inline: 1.875rem;
+  padding-block: 5rem 7.1875rem;
+  &__container {
+    width: 90%;
+    margin-inline: auto;
+  }
+  &__text {
+    font-size: 5rem;
+    line-height: 7.5rem;
+    text-align: center;
+    // 가운데 정렬
+  }
+  &__search-input {
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 0.0625rem solid #000;
+    background-color: #fff;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-inline: auto;
+    // 중앙으로 보내줌
+    display: block;
+    width: 50%;
+    // search 칸 늘어남 %로 줬기 때문에 화면창 크기에 따라서 늘었다 줄었다 함
+  }
+  .feature {
+    padding: 1.875rem;
+    &__container {
+      column-gap: 1.5rem;
+      row-gap: 3rem;
+      width: 80%;
+      margin-inline: auto;
+      padding-left: 0;
+      list-style: none;
+      margin-block: 0;
+      display: flex;
+      // 줄바꿈 가능
+      flex-wrap: wrap;
+      & > * {
+        flex-basis: 0;
+        // 균등하게 사이즈 가능 무조건 넣어야 하는 옵션
+        flex-grow: 1;
+        min-width: 25rem;
+        // 메모: 이따 제대로 된 사이즈 확정할 것
+      }
+    }
+  }
+}
+
+.card {
+  display: flex;
+  gap: 1.875rem;
+  padding-top: 3rem;
+  &__area {
+    &-left {
+    }
+    &-right {
+    }
+    &__img {
+      max-width: 5rem;
+    }
+    &__title {
+    }
+    &__desc {
+    }
+    &__more {
+    }
+  }
+}
