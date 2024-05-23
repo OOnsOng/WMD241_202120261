@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simple js</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .container {
+        max-width: 75rem;
+        margin-inline: auto;
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* grid-template-rows 이거 쓰면 안됨 우리는 몇 줄이 생길지 모르니까*/
+        grid-auto-rows: 1fr;
+        /* 대신 이거 사용 */
+        background-color: oklch(0.95 0 0);
+        gap: 1.5rem;
+      }
+
+      .card {
+        padding: 1rem;
+        background-color: oklch(0.9 0.2 240);
+        transition: all 300ms ease-in-out;
+        /* 자연스럽게 색 바뀜 */
+      }
+
+      .card:hover {
+        background-color: oklch(0.9 0.2 120);
+        /* 카드에 마우스 올리면 색 바뀜 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- (.card>lorem$)*10 -->
+    <div class="container">
+      <div class="card">Lorem.</div>
+      <div class="card">Quo, velit.</div>
+      <div class="card">Beatae, ea nobis.</div>
+      <div class="card">Veritatis porro sequi labore.</div>
+      <div class="card">Quo ipsam inventore incidunt minus.</div>
+      <div class="card">Magnam, quidem? Expedita beatae in dignissimos?</div>
+      <div class="card">
+        Iste architecto repudiandae consectetur, quos praesentium dolorem.
+      </div>
+      <div class="card">
+        Distinctio pariatur libero nostrum officiis provident odit dolore?
+      </div>
+      <div class="card">
+        Alias quaerat libero voluptas, sapiente quae placeat atque deleniti!
+      </div>
+      <div class="card">
+        Distinctio modi pariatur iste atque a quasi fugit cupiditate asperiores.
+      </div>
+    </div>
+  </body>
+</html>
