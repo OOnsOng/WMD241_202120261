@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottie Embeding</title>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script>
+      LottieInteractivity.create({
+        player: "#lottie-2",
+        mode: "cursor",
+        actions: [
+          {
+            type: "click",
+            forceFlag: false,
+          },
+        ],
+      });
+    </script>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="section">
+      <div class="container">
+        <h1>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus,
+          fugit.
+        </h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam odit
+          omnis expedita quo unde accusantium ullam, harum tenetur esse
+          molestias dolorem voluptatem excepturi ut. Omnis impedit quas natus,
+          doloribus eveniet soluta. Numquam commodi ad aspernatur voluptatum
+          excepturi sint ipsam est.
+        </p>
+
+        <dotlottie-player
+          id="lottie-1"
+          class="lottie"
+          src="https://lottie.host/3a370dd6-6e77-4bec-9f67-d8a2bc43ac8f/MwAZwRaMGq.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+          dolorem vitae facilis quos expedita, minus repellendus temporibus
+          tenetur maiores aperiam?
+        </p>
+        <lottie-player
+          id="lottie-2"
+          class="lottie"
+          src="https://lottie.host/3a370dd6-6e77-4bec-9f67-d8a2bc43ac8f/MwAZwRaMGq.json"
+          background="transparent"
+          speed="1"
+        ></lottie-player>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+          dolorem vitae facilis quos expedita, minus repellendus temporibus
+          tenetur maiores aperiam?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

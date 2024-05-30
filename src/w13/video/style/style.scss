@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+  // line-height가 1.5보다 커지면 안예쁨
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 75rem;
+  padding-inline: 1.5rem;
+  margin-inline: auto;
+  // background-color: oklch(0.9 0 0);
+  background-color: aqua;
+  // iframe {
+  // margin-inline: auto;
+  // 가운데 정렬됨
+}
+
+.yt-video {
+  margin-inline: auto;
+  width: 100%;
+  // 화면에 맞춰서 짱커짐
+}
+
+img,
+iframe {
+  display: block;
+}
+
+// css에서 더 나중에 말한 규칙이 우선함
+// 근데 html에 말한 것이 가장 우선임
+
+#video1 {
+  aspect-ratio: 560 / 315;
+}
+
+#video2 {
+  aspect-ratio: 560 / 315;
+}
